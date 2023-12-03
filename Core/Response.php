@@ -1,5 +1,9 @@
 <?php
 
+namespace Core;
+
+
+
 class Response
 {
 const NOTFOUND = 404;
