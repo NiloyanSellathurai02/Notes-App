@@ -12,25 +12,22 @@ spl_autoload_register(function ($class) {
     require base_path("{$class}.php");
 });
 
-
+require base_path('bootstrap.php');
 
 require base_path('Core/router.php');
 
+$router = new \Core\Router();
+$routes = require base_path('routes.php');
+
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+$method =  $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
+
+$router->route($uri, $method);
 
 
-//$id= $_GET['id'];
-//$query= "select * from posts where id = ?";
 
 
 
-//$posts = $db->query($query, [$id])->fetch();
 
+//require base_path('Core/Router.php');
 
-
-//dd($posts['title']);
-//connect to MySQL database.
-
-
-//foreach ($posts as $post){
-//    echo "<li>" . $post['title'] . "</li>";
-//}
