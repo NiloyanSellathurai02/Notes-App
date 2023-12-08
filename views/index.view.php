@@ -8,7 +8,7 @@
 
     <main>
         <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-            Hello Welcome in our project
+            Hello  <?= $_SESSION['user']['email'] ?? 'guest' ?> Welcome in our project
         </div>
     </main>
 
