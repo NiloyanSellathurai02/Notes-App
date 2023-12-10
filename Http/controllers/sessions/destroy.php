@@ -1,9 +1,9 @@
 <?php
 
+Use Core\Session;
 //log the user out.
 
-logout();
-
+Session::destroy();
 
 header('location:/');
 exit();
