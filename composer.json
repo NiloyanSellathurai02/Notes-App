@@ -1,0 +1,26 @@
+{
+    "name": "n.sellathurai/notes-app",
+    "authors": [
+        {
+            "name": "NiloyanSellathurai02",
+            "email": "n.sella2001@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^10.35"
+    },
+        "autoload": {
+            "psr-4": {
+                "Core\\": "Core/",
+                "Http\\": "Http/"
+            }
+        },
+    "require-dev": {
+        "pestphp/pest": "^2.28"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
